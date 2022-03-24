@@ -4,6 +4,8 @@ import java.util.List;
 
 public class AllModel {
     
+    private String profilePic;
+
     private BasicDetails basicDetails;
 
     private PersonalInfo personalInfo;
@@ -24,10 +26,12 @@ public class AllModel {
 
     private String declaration;
 
-    public AllModel(BasicDetails basicDetails, PersonalInfo personalInfo, List<EducationSchool> educationSchools,
-            List<EducationCollege> educationColleges, List<Skill> skills, List<Certificate> certificates,
-            List<Experience> experiences, StrengthsAndHobbies strengthsAndHobbies, List<Project> projects,
-            String declaration) {
+   
+    public AllModel(String profilePic, BasicDetails basicDetails, PersonalInfo personalInfo,
+            List<EducationSchool> educationSchools, List<EducationCollege> educationColleges, List<Skill> skills,
+            List<Certificate> certificates, List<Experience> experiences, StrengthsAndHobbies strengthsAndHobbies,
+            List<Project> projects, String declaration) {
+        this.profilePic = profilePic;
         this.basicDetails = basicDetails;
         this.personalInfo = personalInfo;
         this.educationSchools = educationSchools;
@@ -41,6 +45,14 @@ public class AllModel {
     }
 
     public AllModel() {
+    }
+
+    public String getProfilePic() {
+        return profilePic;
+    }
+
+    public void setProfilePic(String profilePic) {
+        this.profilePic = profilePic;
     }
 
     public BasicDetails getBasicDetails() {
@@ -127,8 +139,9 @@ public class AllModel {
     public String toString() {
         return "AllModel [basicDetails=" + basicDetails + ", certificates=" + certificates + ", declaration="
                 + declaration + ", educationColleges=" + educationColleges + ", educationSchools=" + educationSchools
-                + ", experiences=" + experiences + ", personalInfo=" + personalInfo + ", projects=" + projects
-                + ", skills=" + skills + ", strengthsAndHobbies=" + strengthsAndHobbies + "]";
+                + ", experiences=" + experiences + ", personalInfo=" + personalInfo + ", profilePic=" + profilePic
+                + ", projects=" + projects + ", skills=" + skills + ", strengthsAndHobbies=" + strengthsAndHobbies
+                + "]";
     }
 
 }
