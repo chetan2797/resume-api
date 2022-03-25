@@ -3,8 +3,11 @@ package com.resume.resumemakerapi.helper;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Path;
 
 import com.resume.resumemakerapi.ResumeMakerApiApplication;
+
+import org.springframework.core.io.ClassPathResource;
 
 public class Template {
 
