@@ -10,6 +10,7 @@ public class Template {
      
     static {
         try {
+             System.out.println(java.lang.ClassLoader.getResourceAsStream());
             System.out.println(new ClassPathResource("").getFile().getAbsolutePath()+File.separator+"head-data.html");
             HEAD = new String(Files.readAllBytes(java.nio.file.Paths.get(new ClassPathResource("static").getFile().getAbsolutePath()+File.separator+"head-data.html")));
         } catch (IOException e) {
