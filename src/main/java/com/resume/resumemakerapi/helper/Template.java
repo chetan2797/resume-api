@@ -16,10 +16,10 @@ public class Template {
             ResumeMakerApiApplication obj = new ResumeMakerApiApplication();
             
             System.out.println(obj.getClass().getClassLoader().getResourceAsStream(""));
-            System.out.println(new ClassPathResource("filename").getInputStream());
-            System.out.println(ResourceUtils.getFile("classpath:static/head-data.html").getAbsolutePath());
-            System.out.println(ResourceUtils.getFile("classpath:static"));
-            System.out.println(ResourceUtils.getFile("classpath:static").toPath());
+            try{System.out.println(new ClassPathResource("").getInputStream());}catch(Exception e){}
+            try{System.out.println(ResourceUtils.getFile("classpath:static/head-data.html").getAbsolutePath());}catch(Exception e){}
+            try{System.out.println(ResourceUtils.getFile("classpath:static"));}catch(Exception e){}
+            try{System.out.println(ResourceUtils.getFile("classpath:static").toPath());}catch(Exception e){}
 
             HEAD = new String(Files.readAllBytes(java.nio.file.Paths.get(new ClassPathResource("static").getFile().getAbsolutePath()+File.separator+"head-data.html")));
         } catch (IOException e) {
