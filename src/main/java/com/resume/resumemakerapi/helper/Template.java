@@ -20,7 +20,7 @@ public class Template {
             HEAD = new String(Files.readAllBytes(java.nio.file.Paths.get(file.getAbsolutePath())));
             System.out.println("yes");
         } catch (IOException e) {
-            e.stackPrintTrace();
+            e.printStackTrace();
         }
         try{
             System.out.println(15);
@@ -30,7 +30,7 @@ public class Template {
             HEAD = new String(byteArrays);
             System.out.println("yes");
         } catch (IOException e) {
-            e.stackPrintTrace();
+            e.printStackTrace();
         }
     }
     
