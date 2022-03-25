@@ -27,17 +27,17 @@ public class MainController {
     }
 
     @PostMapping(value = "/resume-2")
-    public String resume2(
-                @RequestBody(required = false) AllModel model) {
-        System.out.println(model);
-        return "done";
+    public ResponseEntity<ResponseHelper> resume2(
+                @RequestBody AllModel model) {
+        ResponseHelper rHelper = this.resumeService.resume2(model);
+        return ResponseEntity.ok(rHelper);
     }
 
     @PostMapping(value = "/resume-3")
-    public String resume3(
-                @RequestBody(required = false) AllModel model) {
-        System.out.println(model);
-        return "done";
+    public ResponseEntity<ResponseHelper> resume3(
+                @RequestBody AllModel model) {
+        ResponseHelper rHelper = this.resumeService.resume3(model);
+        return ResponseEntity.ok(rHelper);
     }
 
 }
