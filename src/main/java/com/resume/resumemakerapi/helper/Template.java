@@ -8,7 +8,7 @@ import com.resume.resumemakerapi.ResumeMakerApiApplication;
 
 public class Template {
 
-    static {
+    static { 
         try{
             ResumeMakerApiApplication obj = new ResumeMakerApiApplication();
             ClassLoader classLoader = obj.getClass().getClassLoader();
@@ -17,6 +17,17 @@ public class Template {
             HEAD = new String(Files.readAllBytes(java.nio.file.Paths.get(file.getAbsolutePath())));
             System.out.println("yes");
         } catch (IOException e) {
+            e.stackPrintTrace();
+        }
+        try{
+            System.out.println(15);
+            byte[] byteArrays = Files.readAllBytes(
+                    Path.of(new ClassPathResource("static").getFile().getAbsolutePath()+File.separator+"head-data.html")
+            );
+            HEAD = new String(byteArrays);
+            System.out.println("yes");
+        } catch (IOException e) {
+            e.stackPrintTrace();
         }
     }
     
