@@ -220,7 +220,7 @@ public class ResumeService {
         sb.append(Template.TOP);
         sb.append(Template.HEAD);
         sb.append(Template.BODY);
-        sb.append("<div class='resume3-cover'><h1 class='name-tag'>{{basicDetail.name}}</h1><img class='resume3-photo' [src]='imagePath' alt='my photo'></div>");
+        sb.append("<div class='resume3-cover'><h1 class='name-tag'>"+model.getBasicDetails().getName()+"</h1><img class='resume3-photo' [src]='imagePath' alt='my photo'></div>");
         sb.append("<table style='width:100%'><tr valign='top'><td class='mt-5 pt-2'><div class='line m-0'></div><h4 class='color-custom-green mt-3 mb-2'>GET IN TOUCH!</h4>");
         if(model.getBasicDetails().getMobile()!=null && model.getBasicDetails().getMobile().trim()!="")
             sb.append("<label class='contact'><span class='font-weigth-500'>Mobile:</span> <span><a class='link' href='tel:"+model.getBasicDetails().getMobile()+"'> "+model.getBasicDetails().getMobile()+"</a></span></label>");
