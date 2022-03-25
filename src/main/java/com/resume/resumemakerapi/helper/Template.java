@@ -27,9 +27,7 @@ public class Template {
         try{System.out.println("11"+ResourceUtils.getFile("classpath:static"+File.separator+"head-data.html").toPath().toRealPath());}catch(Exception e){}
         try{
             File file = ResourceUtils.getFile("classpath:static"+File.separator+"head-data.html");
-            InputStream in = new FileInputStream(file);
-            byte[] bytee = in.readAllBytes();
-            System.out.println("12"+bytee);
+            System.out.println("12"+file.getAbsolutePath());
         }catch(Exception e){}
         try{
             ResumeMakerApiApplication obj = new ResumeMakerApiApplication();
